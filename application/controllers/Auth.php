@@ -47,7 +47,7 @@ class Auth extends MY_Controller {
 
             if ($this->form_validation->run() == TRUE) {
                 // LDAP
-                /*
+               
                 $login = explode("@", $this->input->post("identity"));
                 $login = $login[0];
                 $password = $this->input->post("password");
@@ -73,9 +73,10 @@ class Auth extends MY_Controller {
                 } else {
                     $this->session->set_flashdata('message', "Usuário e/ou senha incorretos");
                     redirect('auth/login', 'refresh');
-                }*/
+                }
                 
                 // NO LDAP
+                /*
                 $remember = (bool) $this->input->post('remember');
 
                 if ($this->ion_auth->login($this->input->post('identity'), $this->input->post('password'), $remember))
@@ -101,7 +102,9 @@ class Auth extends MY_Controller {
                     $this->session->set_flashdata('message', $this->ion_auth->errors());
                     redirect('auth/login', 'refresh');
                 }
-            }
+            */  
+
+            }          
             else
             {
                 $this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
@@ -109,7 +112,7 @@ class Auth extends MY_Controller {
                 $this->data['identity'] = array(
                     'name'        => 'identity',
                     'id'          => 'identity',
-                    'type'        => 'email',
+                    'type'        => 'text',
                     'value'       => $this->form_validation->set_value('identity'),
                     'class'       => 'form-control',
                     'placeholder' => lang('auth_your_email')
@@ -121,7 +124,7 @@ class Auth extends MY_Controller {
                     'class'       => 'form-control',
                     'placeholder' => lang('auth_your_password')
                 );
-
+               
                 /* Load Template */
                 $this->template->auth_render('auth/login', $this->data);
             }

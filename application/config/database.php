@@ -75,8 +75,8 @@ $query_builder = TRUE;
 
 $mainDbHost = "localhost";
 $mainDbUser = "root";
-$mainDbPassword = "123456";
-$mainDbDatabase = "framework";
+$mainDbPassword = "";
+$mainDbDatabase = "banco-de-empregos-2";
 
 $db['default'] = array(
 	'dsn'	=> '',

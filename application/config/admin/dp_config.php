@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$config['title']      = 'Framework';
-$config['title_mini'] = 'F';
-$config['title_lg']   = 'Framework';
+$config['title']      = 'banco-de-empregos-2';
+$config['title_mini'] = 'B';
+$config['title_lg']   = 'banco-de-empregos-2';
 
 
 

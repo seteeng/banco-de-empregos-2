@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'localhost/codeigniter-pmrg';
+$config['base_url'] = 'localhost/banco-de-empregos-2';
 
 /*
 |--------------------------------------------------------------------------
